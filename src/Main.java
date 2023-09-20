@@ -19,27 +19,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello, World!";
+        System.out.println("Hello, World!");
 
 
-        String message = "This is a\\nmultiline string";
+        String message = "This is a\nmultiline string";
         System.out.println(message);
 
 
         int[] numbers = {1, 2, 3};
-        System.out.println(numbers[3]);
+        System.out.println(numbers[2]);
 
 
-        String text = null;
+        String text = "globe";
         System.out.println(text.length());
 
 
-        List<Integer> nums= new ArrayList<>(List.of(5, 10, 15, 20));
+        List<Integer> nums= new ArrayList<>(List.of(9, 10, 15, 20));
         double result = calculateAverage(nums);
         System.out.println("Average: " + result);
 
 
-        List<Integer> evenNumbers = findEvenNumbers(10);
+        List<Integer> evenNumbers = findEvenNumbers(11);
         System.out.println("Even Numbers: " + evenNumbers);
 
 
@@ -71,8 +71,11 @@ public class Main {
 
     public static void performDivision(int a, int b) {
 
-        int result = a / b;
-
-        System.out.println("Division Result: " + result);
+        try{
+            int result = a / b;
+            System.out.println("Division Result: " + result);
+        }catch (ArithmeticException e){
+            System.out.println("Division Result: Invalid divisor");
+        }
     }
 }
